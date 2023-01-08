@@ -1,4 +1,5 @@
 # secril_config_svc.te
 
+type exported3_radio_prop;
 set_prop(secril_config_svc, exported3_radio_prop)
 

@@ -1,4 +1,5 @@
 # hal_lineage_livedisplay_exynos.te
+type hal_lineage_livedisplay_exynos;
 
 allow hal_lineage_livedisplay_exynos sysfs_graphics:dir search;
 allow hal_lineage_livedisplay_exynos {
