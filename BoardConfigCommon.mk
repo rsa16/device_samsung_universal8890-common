@@ -76,19 +76,19 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
-TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_KERNEL_BASE := 0x10000000
+#TARGET_KERNEL_ARCH := arm64
+#TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+#BOARD_CUSTOM_BOOTIMG := true
+#BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
+#TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+#BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+#BOARD_KERNEL_BASE := 0x10000000
 #BOARD_KERNEL_CMDLINE := The bootloader ignores the cmdline from the boot.img
-TARGET_KERNEL_HEADER_ARCH := arm64
-BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
-BOARD_RAMDISK_USE_XZ := true
+#TARGET_KERNEL_HEADER_ARCH := arm64
+#BOARD_KERNEL_IMAGE_NAME := Image
+#BOARD_KERNEL_PAGESIZE := 2048
+#BOARD_KERNEL_SEPARATED_DT := true
+#BOARD_RAMDISK_USE_XZ := true
 
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"

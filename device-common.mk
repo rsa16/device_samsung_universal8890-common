@@ -98,8 +98,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
     
 # DTB tool    
-PRODUCT_HOST_PACKAGES += \
-    dtbhtoolExynos
+# PRODUCT_HOST_PACKAGES += \
+#    dtbhtoolExynos
 
 # FastCharge
 PRODUCT_PACKAGES += \

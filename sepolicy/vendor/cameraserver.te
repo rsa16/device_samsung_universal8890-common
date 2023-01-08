@@ -20,3 +20,4 @@ r_dir_file(cameraserver, media_rw_data_file);
 allow cameraserver media_rw_data_file:dir search;
 
 allow cameraserver debugfs_ion:dir search;
+

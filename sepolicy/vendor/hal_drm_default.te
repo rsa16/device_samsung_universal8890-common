@@ -12,3 +12,4 @@ allow hal_drm_default media_data_file:dir create_dir_perms;
 allow hal_drm_default tee:unix_stream_socket connectto;
 
 vndbinder_use(hal_drm_default)
+

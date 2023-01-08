@@ -14,3 +14,4 @@ allow hal_drm_clearkey { appdomain -isolated_app }:fd use;
 
 allow hal_drm_clearkey mediadrm_vendor_data_file:dir create_dir_perms;
 allow hal_drm_clearkey mediadrm_vendor_data_file:file create_file_perms;
+

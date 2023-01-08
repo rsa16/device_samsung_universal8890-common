@@ -12,3 +12,4 @@ allow hal_gnss_default {
 }:fifo_file create_file_perms;
 
 vndbinder_use(hal_gnss_default)
+

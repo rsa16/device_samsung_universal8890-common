@@ -7,3 +7,4 @@ allow hal_memtrack_default {
     debugfs_mali
     debugfs_mali_mem
 }:file r_file_perms;
+

@@ -5,3 +5,4 @@ allow domain {
     debugfs_mali
     debugfs_mali_mem
 }:dir r_dir_perms;
+

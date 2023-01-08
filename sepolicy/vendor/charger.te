@@ -43,3 +43,4 @@ allow charger sysfs_rtc:file r_file_perms;
 allow charger proc_reset_reason:file r_file_perms;
 
 set_prop(charger, powerctl_prop)
+

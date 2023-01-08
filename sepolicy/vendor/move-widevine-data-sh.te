@@ -18,3 +18,4 @@ allow move-widevine-data-sh mediadrm_vendor_data_file:dir { create_dir_perms rel
 
 # for writing files_moved so we only execute the move once
 allow move-widevine-data-sh mediadrm_vendor_data_file:file { create open write getattr relabelto };
+

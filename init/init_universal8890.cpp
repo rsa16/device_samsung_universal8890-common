@@ -1,7 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project. All rights reserved.
    Copyright (c) 2017-2020, The LineageOS Project. All rights reserved.
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -14,7 +13,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -28,9 +26,12 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "vendor_init.h"
+#include <android-base/strings.h>
+
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+
 #include "property_service.h"
-#include "util.h"
 
 #include "init_universal8890.h"
 
@@ -48,7 +49,13 @@ std::vector<std::string> ro_product_props_default_source_order = {
 
 void property_override(char const prop[], char const value[], bool add)
 {
-    property_set(prop, value);
+    auto pi = (prop_info *) __system_property_find(prop);
+
+    if (pi != nullptr) {
+        __system_property_update(pi, value, strlen(value));
+    } else if (add) {
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
 }
 
 void gsm_properties(const char default_network[])
